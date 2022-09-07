@@ -33,7 +33,6 @@ const Testimonial = () => {
                 }}
                 src="https://markitup.in/assets/img/features-3.png"
                 alt=""
-                srcset=""
               />
         </Box>
 

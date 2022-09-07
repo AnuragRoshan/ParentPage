@@ -31,10 +31,10 @@ const Navbar = () => {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
         style={{
-          boxShadow: " 0 2px 4px 0 rgba(0,0,0,.2);",
+          boxShadow: " 0 2px 4px 0 rgba(0,0,0,.2)",
           backgroundColor: "#fffffff0",
           position: "fixed",
-          padding: "0.8rem",
+          padding: "0.5rem",
         }}
       >
         <Toolbar style={{ marginInline: "4rem" }}>

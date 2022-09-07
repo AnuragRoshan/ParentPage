@@ -70,7 +70,6 @@ const OurServices = () => {
                 }}
                 src="https://markitup.in/assets/img/values-1.png"
                 alt=""
-                srcset=""
               />
             </Box>
             <Box style={{fontWeight:"bolder",fontSize:"1.7rem",paddingBlockEnd:"0.5rem"}}>Sjdfhsdhfj kjsdfh dsufhsk</Box>
@@ -87,7 +86,6 @@ const OurServices = () => {
                 }}
                 src="https://markitup.in/assets/img/values-1.png"
                 alt=""
-                srcset=""
               />
             </Box>
             <Box style={{fontWeight:"bolder",fontSize:"1.7rem",paddingBlockEnd:"0.5rem"}}>Sjdfhsdhfj kjsdfh dsufhsk</Box>
@@ -104,7 +102,6 @@ const OurServices = () => {
                 }}
                 src="https://markitup.in/assets/img/values-1.png"
                 alt=""
-                srcset=""
               />
             </Box>
             <Box style={{fontWeight:"bolder",fontSize:"1.7rem",paddingBlockEnd:"0.5rem"}}>Sjdfhsdhfj kjsdfh dsufhsk</Box>

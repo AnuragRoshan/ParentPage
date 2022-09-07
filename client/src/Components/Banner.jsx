@@ -79,7 +79,7 @@ const Banner = () => {
           style={{ flex: "1" }}
         >
           <Box >
-            <img style={{width:"100%"}} src="https://markitup.in/assets/img/hero-img-min.png" alt="" srcset="" />
+            <img style={{width:"100%"}} src="https://markitup.in/assets/img/hero-img-min.png" alt="" />
           </Box>
 
         </Box>

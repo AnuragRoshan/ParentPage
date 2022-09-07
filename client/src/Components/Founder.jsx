@@ -58,7 +58,6 @@ const Founder = () => {
           
             src="https://www.linkpicture.com/q/photostudio-4-designify.png"
             alt=""
-            srcset=""
           />
            
            <Box className={classes.detailInfo} >
@@ -74,7 +73,6 @@ const Founder = () => {
           
             src="https://www.linkpicture.com/q/photostudio-4-designify.png"
             alt=""
-            srcset=""
           />
            
            <Box className={classes.detailInfo} >
@@ -90,7 +88,6 @@ const Founder = () => {
           
             src="https://www.linkpicture.com/q/photostudio-4-designify.png"
             alt=""
-            srcset=""
           />
            <Box className={classes.detailInfo} >
             Anurag Roshan
