@@ -1,11 +1,6 @@
-import {
-  Box,
-  Button,
-  makeStyles,
-  TextField,
-} from "@material-ui/core";
+import { Box, Button, makeStyles, TextField } from "@material-ui/core";
 import React, { useState } from "react";
-
+import axios from "axios";
 
 const useStyles = makeStyles({
   btn: {
@@ -38,14 +33,16 @@ export const Query = () => {
 
   const handleInputs = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
+    console.log(user);
   };
 
   // maintain state of form data end
 
-  const submitForm =async()=>{
-
-  }
-
+  const submitForm = async() => {
+    await axios.post(`http://localhost:5000/submitForm`, user).then((response) => {
+      console.log(response);
+    });
+  };
 
   return (
     <Box
@@ -133,7 +130,7 @@ export const Query = () => {
           name="suggestions"
         ></TextField>
         <Box>
-          <Button onClick={()=>submitForm()} className={classes.btn}>
+          <Button onClick={() => submitForm()} className={classes.btn}>
             <Box style={{ position: "relative" }}> Submit</Box>
           </Button>
         </Box>
