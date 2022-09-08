@@ -1,5 +1,4 @@
-// const express = require("express")
-// import express from "express"
+
 const express=require("express")
 const app = express();
 const bodyParser=require("body-parser")
@@ -13,10 +12,8 @@ app.use(bodyParser.json());
 
 
 
-// import dotenv from "dotenv";
 const dotenv=require("dotenv")
 
-// import Router from "./Routes/routes.js"
 const Router=require("./Routes/routes")
 
 

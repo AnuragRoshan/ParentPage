@@ -12,7 +12,7 @@ const userSchema=mongoose.Schema({
     },
     
     suggestions:{
-        type:String,
+        type:Array,
     }
 })
 
