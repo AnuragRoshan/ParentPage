@@ -21,7 +21,7 @@ const Footer = () => {
   const classes = useStyles();
   return (
     <Grid
-      style={{ display: "flex", flexDirection: "column", padding: "2.2rem" }}
+      style={{ display: "flex", flexDirection: "column", padding: "2rem",marginBlockStart:"3.5rem" ,boxShadow:"3px 0px 17px 4px rgba(216 ,216,216,0.75)"}}
     >
       <Box style={{ display: "flex", flexDirection: "row" }}>
         <Box style={{ flex: "3", display: "flex", flexDirection: "column" }}>

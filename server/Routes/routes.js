@@ -2,7 +2,7 @@
 const express = require("express");
 const { reset } = require("nodemon");
 const User = require("../Model/user")
-
+var validator = require("email-validator");
 
 
 const router = express.Router();
@@ -16,7 +16,12 @@ router.use('/submitForm', async (req, res, next) => {
         const name = form.name
         const suggestions = form.suggestions
 
+        const emailCheck = validator.validate(email);
+        // console.log(emailCheck);
 
+        if(emailCheck==false){
+            return res.status(202).json({ msg: "Invalid Email" })
+        }
 
         user=await User.findOne({email:email});
 
@@ -25,11 +30,11 @@ router.use('/submitForm', async (req, res, next) => {
                     { email: email },
                     { $push: { suggestions: suggestions } }
                 )
-                //  res.status(500).json({ msg: "Same Email Already Exist " })
+                 res.status(200).json({ msg: "Suggestion Added To Your Stack" })
             } else {
                 const newSugges = new User(form)
                 newSugges.save();
-                return res.status(200).json({ msg: "form submitted succesfully " })
+                return res.status(200).json({ msg: "Added Succesfully " })
             }
 
     } catch (error) {

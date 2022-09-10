@@ -1,6 +1,8 @@
 import { Box, Button, makeStyles, TextField } from "@material-ui/core";
 import React, { useState } from "react";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const useStyles = makeStyles({
   btn: {
@@ -11,13 +13,16 @@ const useStyles = makeStyles({
     fontFamily: "Montserrat",
     fontWeight: "bolder",
     paddingInline: "3rem",
-    transition: "0s",
+    transition: "500ms",
     "&:hover": {
-      border: "0px solid black",
+      border: "0px solid transparent",
       backgroundColor: "rgb(93 81 81)",
       color: "white",
     },
   },
+  // toastifyCss:{
+
+  // }
 });
 
 export const Query = () => {
@@ -38,10 +43,34 @@ export const Query = () => {
 
   // maintain state of form data end
 
-  const submitForm = async() => {
-    await axios.post(`http://localhost:5000/submitForm`, user).then((response) => {
-      console.log(response);
-    });
+  const submitForm = async () => {
+    // alert("Submitted")
+    await axios
+      .post(`http://localhost:5000/submitForm`, user)
+      .then((response) => {
+        var message = response.data.msg;
+        var status = response.status;
+        if (status == 200) {
+          toast.success(`${message}`, {
+            position: "top-center",
+            autoClose: 2000,
+            pauseOnHover: false,
+            pauseOnFocusLoss: false,
+            draggable: true,
+            textAlign: "center",
+          });
+          // window.location.reload();
+        } else if ((status = 202)) {
+          toast.warn(`${message}`, {
+            position: "top-center",
+            autoClose: 2000,
+            pauseOnHover: false,
+            pauseOnFocusLoss: false,
+            draggable: true,
+            textAlign: "center",
+          });
+        }
+      });
   };
 
   return (
@@ -133,6 +162,18 @@ export const Query = () => {
           <Button onClick={() => submitForm()} className={classes.btn}>
             <Box style={{ position: "relative" }}> Submit</Box>
           </Button>
+          <ToastContainer
+            //  position="top-center"
+            //  autoClose={5000}
+            //  hideProgressBar={false}
+            //  newestOnTop={false}
+            //  closeOnClick
+            //  rtl={false}
+            //  pauseOnFocusLoss
+            //  draggable
+            //  pauseOnHover
+            className={classes.toastifyCss}
+          />
         </Box>
       </Box>
     </Box>
