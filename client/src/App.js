@@ -10,7 +10,15 @@ import { Query } from './Components/Query';
 import Footer from './Components/Footer';
 
 const useStyles = makeStyles(() => ({
-
+  testimonialResponsive: {
+    display: "flex", flexDirection: "row",
+    "@media (max-width:1000px)": {
+      display: "flex",
+      flexDirection: "column",
+      margin: "7rem",
+      // color: "white",
+    },
+  }
 
 }))
 
@@ -22,7 +30,7 @@ function App() {
       <Banner />
       <OurServices />
       <Founder />
-      <Box style={{ display: "flex", flexDirection: "row" }}>
+      <Box className={classes.testimonialResponsive} >
         <Box style={{ flex: "1", textAlign: "center" }}>
           <Testimonial />
         </Box>
@@ -30,7 +38,7 @@ function App() {
           <Query />
         </Box>
       </Box>
-      <Footer/>
+      <Footer />
 
     </Box>
   );

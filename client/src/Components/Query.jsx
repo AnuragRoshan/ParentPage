@@ -50,7 +50,7 @@ export const Query = () => {
       .then((response) => {
         var message = response.data.msg;
         var status = response.status;
-        if (status == 200) {
+        if (status === 200) {
           toast.success(`${message}`, {
             position: "top-center",
             autoClose: 2000,
@@ -76,7 +76,7 @@ export const Query = () => {
   return (
     <Box
       style={{
-        padding: "2.2rem",
+        padding: "4rem",
         marginRight: "1rem",
         display: "flex",
         flexDirection: "column",

@@ -17,7 +17,7 @@ const useStyle = makeStyles(() => ({
 const Testimonial = () => {
     const classes=useStyle();
   return (
-    <Box style={{padding:"2.2rem",display:"flex",flexDirection:"column"}}>
+    <Box style={{padding:"4rem",display:"flex",flexDirection:"column"}}>
         <Box style={{
               fontFamily: 'Aboreto',fontWeight:"bolder",fontSize:"3rem",
               color:"#493d3d"}}>

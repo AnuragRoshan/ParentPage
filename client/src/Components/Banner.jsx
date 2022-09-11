@@ -1,8 +1,5 @@
 import { Box, Button, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
-// import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-
-import SearchIcon from "@mui/icons-material/Search";
 
 
 const useStyle = makeStyles(() => ({
@@ -11,9 +8,12 @@ const useStyle = makeStyles(() => ({
     display: "flex",
     flexDirection: "column",
     fontFamily: "Montserrat",
+    alignItems:"center"
   },
   right: {
-    padding: "4rem",
+    padding: "0rem",
+    width:"100%",
+    height:"100%"
   },
   btn: {
     backgroundColor: "grey",
@@ -24,12 +24,23 @@ const useStyle = makeStyles(() => ({
       border:"1px solid black"
     },
   },
+  bannerResponsive:{
+    display: "flex", 
+    flexDirection: "row", 
+    "@media (max-width:1000px)": {
+      display: "flex",
+      flexDirection: "column",
+      margin: "7rem",
+      fontSize:"1rem"
+      // color: "white",
+    },
+  }
 }));
 const Banner = () => {
   const classes = useStyle();
   return (
-    <Box style={{  marginBlock: "4rem",padding: "1.8rem" ,backgroundColor:"transparent",backgroundImage:"https://www.linkpicture.com/q/5667004.jpg"}}>
-      <Box style={{ display: "flex", flexDirection: "row" }}>
+    <Box style={{  marginBlock: "4rem",paddingInline: "3.6rem",paddingBlockStart:"3.6rem" ,backgroundColor:"transparent",backgroundImage:"https://www.linkpicture.com/q/5667004.jpg"}}>
+      <Box className={classes.bannerResponsive} >
         <Box className={classes.left} style={{ flex: "1" }}>
           <Box>
             <Typography
@@ -79,7 +90,8 @@ const Banner = () => {
           style={{ flex: "1" }}
         >
           <Box >
-            <img style={{width:"100%"}} src="https://markitup.in/assets/img/hero-img-min.png" alt="" />
+            <img style={{
+                  objectFit: "cover",width:"100%" ,height:"100%"}} src="https://markitup.in/assets/img/hero-img-min.png" alt="" />
           </Box>
 
         </Box>
